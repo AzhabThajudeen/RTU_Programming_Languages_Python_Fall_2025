@@ -1,19 +1,21 @@
 """
 Task 1 – Simple Function with Arithmetic
 ---------------------------------------
-Write a function `circle_area(radius)` that returns the area of a circle.
+Write a function circle_area(radius) that returns the area of a circle.
 Formula: area = π × radius²
 Use the math module for π.
 Ask user for radius and print result with 2 decimals.
 """
 
-# TODO: import math
+import math
 
 def circle_area(radius):
-    """Return the area of a circle given its radius."""
-    # TODO: implement formula using math.pi
-    pass
+    # Calculate the area of a circle using the formula π × r²
+    area = math.pi * (radius ** 2)
+    return area
 
-if __name__ == "__main__":
-    # TODO: ask for user input, call circle_area(), and print formatted result
-    pass
+# Main part of the program
+radius = float(input("Enter the radius: "))
+area = circle_area(radius)
+
+print("Area of the circle = {:.2f}".format(area))
